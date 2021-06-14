@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+    --green-dark: #004800;
+    --green-medium: #27652A;
+    --green-ligth: #378842;
+    --gray-dark: rgba(172, 179, 177, 0.301);
+    --white :#f4fffd;
+    --green-blue :#2980B9
+}
+
+body {
+    font-size: 20px;
+    font-family: 'Open Sans',sans-serif;
+}
+
+p{
+    font-size: 20px;
+}
+
+/* -------------- */
+/* Encabezado - Header */
+
+.contenido-header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../Imágenes_Proyecto/Fondo_Ventas.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.contenido-header .texto {
+    width: 100%;
+    height: 100vh;
+    font-size: 85px;
+    font-weight: 400;
+    font-family: 'Noto Serif' , serif;
+    font-style: italic;
+    display: flex;
+    align-items:flex-end ;
+    justify-content: center ;
+    color: whitesmoke
+}
+
+/* ----------------- */
+/* Aquí se le va a dar estilo a los encabezados del menú */
+/* ----------------- */
+
+.menu {
+    background-color: var(--green-dark);
+    width: 100% ;
+    position: sticky;
+    top: 0;
+    padding: 5px;
+    z-index: 999;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-family: 'Noto Sefir' , serif;
+    font-style: italic;
+    margin-bottom: 60px;
+
+}
+
+/* ----Diseño a los apartados del menú---*/
+
+.menu a {
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 26px;
+    background-color: var(--green-dark);
+    margin: 0px 10px;
+    transition: .5s ease all;
+    color: var(--white);
+    text-decoration: none;
+
+}
+
+/* ----Efecto a los apartados del menú---*/
+
+.menu a:hover{
+    transform: translateY(18px)  ;
+    background-color: var(--green-ligth);
+
+}
+
+/* ----Diseño de la sección Política de Ventas---*/
+
+.politica  {
+    margin-bottom: 60px;
+
+}
+
+/* ----Diseño Texto del titulo---*/
+
+
+.titulo {
+    font-size: 20px;
+    color: var(--white) ;
+    font-family: 'Noto Serif' , serif;
+    font-weight: 700;
+    z-index: 2;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.titulo span {
+    background-color: var(--green-dark);
+    padding: 0 15px;
+    z-index: 99;
+    position: relative;
+}
+
+/* ----línea del Titulo---*/
+
+.titulo::after {
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 100%;
+    background: var(--green-ligth);
+    position: relative;
+    top: -29px;
+    z-index: 1;
+}
+
+/* ----Diseño del Subtitulo---*/
+
+.politica .subtitulo {
+    width: 70%;
+    font-size: 35px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.politica .enlace {
+    display: inline-block;
+    margin-top: 40px;
+    color: var(--green-ligth);
+    font-weight: 500px;
+    border-bottom: 1px solid transparent;
+    transition: .3s ease all ;
+}
+
+/* ----Diseño de efecto del Subtitulo---*/
+
+.politica .enlace:hover {
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-bottom: 1px solid var(--green-ligth);
+}
+
+/* ----Diseño de la sección Productos---*/
+
+.productos {
+    background: var(--gray-dark);
+    padding: 20px;
+    margin-bottom: 60px;    
+}
+
+/* ----Diseño Texto del subtitulo---*/
+
+.productos .subtitulo {
+    width: 70%;
+    font-size: 35px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+/* ----Diseño de los productos---*/
+
+.productos .producto {
+    position: relative;
+    width: 100%;
+}
+
+.productos .capa {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--green-ligth);
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+/* ----Capa flotante sobre el producto---*/
+
+.productos .producto:hover .capa{
+    width: 93%;
+    opacity: .8;
+}
+
+/* ----Diseño texto descripción producto sobre la capa---*/
+
+.productos .producto .capa-texto {
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    white-space: nowrap;
+    color: var(--white);
+    font-size: 18px;
+    transform: translate(-50%,50%);
+    overflow: hidden;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+/* ----Diseño apartado otros productos---*/
+
+.productos .btn-productos {
+    background-color: var(--green-ligth);
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border: 1px solid transparent ;
+    transition: .1s ease;
+}
+
+/* ----Diseño apartado otros productos para cuando se pasa el cursor---*/
+
+.productos .btn-productos:hover {
+    background-color: transparent ;
+    border: 1px solid var(--green-ligth);
+    color: var(--green-ligth);
+}
+
+/* ----Diseño del separador---*/
+
+.separador {
+    width: 100%;
+    height: 300px;
+    background-image: url(../Imágenes_Proyecto/Fondo\ Separador_2.jpg) ;
+    background-position: center;
+    background-size: cover;
+/* ----Con esto la imagen se queda "Pegada"---*/
+        background-attachment: fixed;
+        margin-bottom: 80px;
+}
+
+/* ----Diseño del texto de la imagen del separador"---*/
+
+.separador q {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: 'Noto serif' , serif;
+    padding: 130px 80px;
+}
+
+/* ----Diseño del acerca de"---*/
+
+.acerca-de {
+    margin-bottom: 60px;
+}
+
+/* ----Diseño del apartado de consolas"---*/
+
+.consolas {
+    margin-bottom: 100px;
+}
+
+.consolas img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* ----Diseño pie de página"---*/
+
+.redes-sociales {
+    padding: 10px;
+    background-color: var(--green-blue);
+}
+
+.redes-sociales img {
+    padding: 1px;
+    border-radius: 30%;
+    width: 30%;
+    transition: .3s ease all;
+}
+
+.redes-sociales img:hover {
+    transform: scale(1.2);
+}
